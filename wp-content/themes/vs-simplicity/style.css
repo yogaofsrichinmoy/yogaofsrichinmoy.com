@@ -1,0 +1,345 @@
+/*  
+Theme Name: VS Simplicity
+Theme URI: http://www.vasudevaserver.org
+Version: 0.1
+Author: Vasudeva Server
+
+*/
+@import url("http://www.yogaofsrichinmoy.com/wp-content/themes/vs-simplicity/css/common.css");
+
+/*-------------------------------------------------------------------------------------------*/
+/* LAYOUTS AND WIDTHS */
+/*-------------------------------------------------------------------------------------------*/
+
+#wrapper, #supplementary-inside, #colophon-inside { width: 96%; max-width:820px; padding: 0 2%; margin-left:auto; margin-right:auto; }
+
+.entry { max-width: 100%; }
+
+#footer-widgets .block {width: 24.3%}
+
+#right-header-elements { position: absolute; top: 0; right: 0; z-index: 10; max-width: 300px; height: 100%; }
+
+#sidebar { width: 26.25%; }
+
+#content.narrowcolumn { width: 70%; margin-right: 3.75%; } 
+
+/*-------------------------------------------------------------------------------------------*/
+/* 1. SETUP */
+/*-------------------------------------------------------------------------------------------*/
+
+/* 1.1 Defaults */
+
+body, button, input, select, textarea  { color: #404040; font-family: Palatino, serif; font-size: 13px; font-size: 1.3rem; line-height: 1.5;  color: #555; background-color: #fff; }
+
+h1, h2, h3, h4, h5, h6  { margin: 0; font-family:'Kozuka Gothic Pro', 'Open Sans', Verdana, serif; color: #222; font-weight:200; line-height: 1.2em;}
+h1  {font-size: 1.65em } h2  {font-size: 1.4em;} h3  {font-size: 1.1em;} h4  {font-size: 1.1em;} h5  {font-size: 1.1em;} h6  {font-size: 1.1em;} 
+
+#content, #sidebar h2 {font-size: 16px; line-height: 1.5em; }
+
+hr { background-color: #e6e6e6;	border:0; height: 1px; margin-bottom: 20px; }
+
+input, textarea { padding: 5px; border-color: #ccc #efefef #efefef #ccc; border-width:1px; border-style:solid; margin-bottom:10px;}
+
+/* 1.2 Hyperlinks */
+
+a, a:link, a:visited  { color: #3077ee; text-decoration:none;}
+a:hover { text-decoration:underline; color:red; }
+
+h1 a:link, h1 a:visited, h2 a:link, h2 a:visited, h3 a:link, h3 a:visited,
+h4 a:link, h4 a:visited, h5 a:link, h5 a:visited, h6 a:link, h6 a:visited  { text-decoration: none; }
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover  {text-decoration: underline;}
+
+/*-------------------------------------------------------------------------------------------*/
+/* 2. SITE STRUCTURE & APPEARANCE */
+/*-------------------------------------------------------------------------------------------*/
+
+/* 2.1 Containers & Columns */
+#wrapper  { padding:10px 0 40px; }
+
+/* 2.2 Navigation */
+#primary-navigation{font-size:14px;border-top:1px solid #dbdbdb; border-bottom:1px solid #dbdbdb;padding:7px 0; }
+
+#secondary-navigation{font-size:12px; display: inline-block; width: auto; max-height: 20px; overflow: hidden; float: right;}
+
+.menu { z-index:99; margin:0; padding:0; list-style:none; line-height:1; margin-left: 0; }
+.menu a  { position:relative; color:#555; display:block; z-index:100; padding:5px 10px; line-height:18px; text-decoration:none; }
+.menu li a:hover, .menu li.current_page_item a, .menu li.current_page_parent a, .menu li.current-menu-ancestor a, .menu li.current-menu-item a, .menu li.current_page_item li a, .menu li.current_page_parent li a, .menu li.current-menu-ancestor li a, .menu li.current-menu-item li a, .menu li.sfHover a { background:#eee; }
+.menu li li.current_page_item { background:none; }
+.menu li  { float:left; width: auto; }
+.menu li a.sf-with-ul { padding-right:20px; }
+.menu li ul li a  { text-shadow:0 1px 0 #fff; }
+.menu li ul li a { border-radius:0;-moz-border-radius:0;-webkit-border-radius:0;}
+.menu a, .menu li.current_page_item, .menu li.current_page_parent, .menu li.current-menu-ancestor, .menu li.current-menu-item, .menu li.sfHover, .menu li.selected { border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px; behavior: url(http://www.yogaofsrichinmoy.com/wp-content/themes/vs-simplicity/PIE/PIE.php);}
+
+#primary-navigation .menu li.menu-item-language-current { float: right; }
+#primary-navigation .menu li.menu-item-language-current a { padding-right: 0; }
+#primary-navigation .menu .submenu-languages li.menu-item-language-current { float: left; width: 110px; }
+#primary-navigation .menu .submenu-languages li.menu-item-language-current a:hover { width: 90px; } 
+#primary-navigation .menu .submenu-languages {  width: 100px;}
+
+
+/* Hide mobile dropdown at larger res */
+#primary-navigation .menu-header select { display: none; }
+
+#secondary-navigation .menu a { padding: 0 0 2px 12px; color: #777; }
+#secondary-navigation .menu li a:hover, #secondary-navigation .menu li.current-menu-item a,  #secondary-navigation .menu li.current_page_item a { background: none; color: #111; }
+#secondary-navigation .menu li.menu-item-language-current a { margin-left: 15px;  }
+
+/* 2.2.1 wpml language switcher in menu */
+#primary-navigation .menu .submenu-languages li.menu-item-language-current { float: left; width: 100px; }
+#primary-navigation .menu .submenu-languages li.menu-item-language-current a:hover { width: 70px; } 
+#secondary-navigation .menu .submenu-languages { margin-left: 15px;  width: 100px;}
+#secondary-navigation .menu .submenu-languages li.menu-item-language-current a { width: 84px; margin-left: 0; padding: 3px 8px; }
+
+#footer .menu li { width: 100%; }
+#footer .menu a { padding: 0 0 2px 12px; color: #777; }
+#footer .menu li a:hover, #footer .menu li.current-menu-item li a,  #footer .menu li.current_page_item li a{ background: none; color: #111; }
+
+/* 2.2.2 Drop-down menus */
+.menu li ul  { background: #FFF; position: absolute; left: -999em; width: 180px; border: 1px solid #dbdbdb; border-width:1px 1px 0; z-index:999; }
+.menu li ul li  { background:#eee; border-top:1px solid #fff; border-bottom:1px solid #dbdbdb;}
+.menu li ul li a  { width:160px; color:#555; font-size:0.8em; line-height:18px; }
+.menu li ul li a.sf-with-ul { padding:5px 10px; }
+.menu li ul li a:hover, .menu li.sfHover ul li a.sf-with-ul { background:#eaeaea;}
+.menu li ul ul  { margin: -30px 0 0 180px; }
+.menu li ul ul li a  {  }
+.menu li ul li ul li a  {  }
+	
+.menu li:hover,.menu li.hover  { position:static; }
+.menu li:hover ul ul, .menu li.sfhover ul ul,
+.menu li:hover ul ul ul, .menu li.sfhover ul ul ul,
+.menu li:hover ul ul ul ul, .menu li.sfhover ul ul ul ul { left:-999em; }
+.menu li:hover ul, .menu li.sfhover ul,
+.menu li li:hover ul, .menu li li.sfhover ul,
+.menu li li li:hover ul, .menu li li li.sfhover ul,
+.menu li li li li:hover ul, .menu li li li li.sfhover ul  { left:auto; }	
+
+/* 2.3 Header */
+#header{padding: 0;clear:both;}
+#banner { height: auto; position:relative; }
+#search-form { position: absolute; right: 0; bottom: 0; } 
+
+#search-form input {
+    background: url("http://www.yogaofsrichinmoy.com/wp-content/themes/vs-simplicity/images/search-icon.png") no-repeat scroll 98% center #fff;
+    border: 1px solid #DEDEDE;
+    border-radius: 4px;
+    color: #787878;
+    padding: 5px 30px 5px 5px;
+    width: 190px;
+    behavior: url(http://www.yogaofsrichinmoy.com/wp-content/themes/vs-simplicity/PIE/PIE.php);
+}
+
+
+#language-switcher { text-align: right; }  
+#lang_sel { height: auto; }
+#lang_sel a.lang_sel_sel { border: none; }
+#site-title { display: block; float: left; }
+
+/* 2.3.1 Slideshow - covered in common.css */
+
+/* 2.3.2 Front page featured widgets */
+
+#front-featured .widget-area { float: left; margin-right: 3.7%; width: 30.85%; font-size: 1.1em; margin-bottom: 15px; height: auto; }
+#front-featured .widget-area + .widget-area + .widget-area { margin-right: 0; }
+#front-featured h3 {font-size: 1.1em; margin-bottom: 7px; }
+   
+/* 2.4 Content */
+#breadcrumb { margin: 15px 0 0 0; font-size: .8em; line-height: 1em; }
+#content{padding:0; position:relative;}
+
+
+/* 2.5 Sidebar */
+#sidebar{overflow:hidden; margin-top: 65px; }
+#sidebar h2 { font-size: 1.2em; text-transform: uppercase; }
+#sidebar ul ul ul { margin-left: 10px; }
+#sidebar ul li { line-height: 1.15em; margin-bottom: 3px; }
+#sidebar ul li.current_page_item { font-weight: bold; }
+#sidebar ul.list-children { font-size: .9em; }
+
+/* 2.6 Footer */
+#footer{padding: 20px 0; color:#666;}
+#footer p {font: normal 13px;}
+#footer h2 {font-size: 1.2em; text-transform: uppercase;}
+
+#colophon {
+	clear: both;
+	margin-top: 10px;
+}
+#supplementary {
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+	padding: 1.625em 7.6%;
+	overflow: hidden;
+	background: #eee;
+}
+
+/* Colophon Widget Areas */
+#colophon .widget-area {
+	float: left;
+	margin-right: 3.7%;
+	width: 48.1%;
+}
+#colophon .widget-area + .widget-area {
+	margin-right: 0;
+}
+
+#colophon-second ul.menu {
+   float: right;
+   display: inline-block;
+   widht: auto;   
+}    
+
+/* Footer Widget Areas */
+#supplementary .widget-area {
+	float: left;
+	margin-right: 3.7%;
+	width: 30.85%;
+}
+#supplementary .widget-area + .widget-area + .widget-area {
+	margin-right: 0;
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* 4. WIDGETS */
+/*-------------------------------------------------------------------------------------------*/
+
+/* 4.2 Generic Widgets */
+.sidebar-widget  { margin: 0 0 30px 0; font-size:13px; }
+.sidebar-widget h3  { margin: 0 0 20px 0; padding:0 0 15px; text-transform:uppercase; color:#555; border-bottom:3px solid #e6e6e6; }
+.sidebar-widget p { margin-bottom:15px; }
+
+.sidebar-widget ul  { }
+.sidebar-widget ul li  {  }
+.sidebar-widget ul li a  { line-height: 16px; padding: 0; text-decoration: none; }
+.sidebar-widget ul li a:hover  { text-decoration:underline; }
+.sidebar-widget ul ul  { border-top: none; clear:both; list-style-position:inside; list-style-type:disc; }
+
+#recent-posts-2 ul, #recent-posts-3 ul { clear:both; list-style-position:inside; list-style-type:disc; }
+
+#footer-widgets { border-top:1px solid #e6e6e6; padding:10px 0; }
+#footer-widgets .block { padding:20px 0 0 20px; width:210px; float:left; }
+
+/*//////////////////////////////////////////////////////////////////// 
+//  13 - Media Queries
+////////////////////////////////////////////////////////////////////*/
+
+
+/* Smartphones and low resolution tablets */
+@media only screen and (max-device-width: 650px), only screen and (max-width: 650px)  {
+    
+
+    #primary-navigation .menu-header ul { display: none; }
+    #primary-navigation .menu-header select {
+        display: block;
+        /* background: url('images/select-arrows.png') no-repeat scroll right center #FFF; */
+        -moz-appearance: none; -webkit-appearance: none; appearance: none;
+        padding: 3px 2%;
+        font-size: 14px;
+        float: left;
+        border: 1px solid #dedede;
+        -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px;
+        width: 35%;
+        margin: 0 2%;
+        behavior: url(http://www.yogaofsrichinmoy.com/wp-content/themes/vs-simplicity/PIE/PIE.php);
+    }
+    #primary-navigation .menu-header select option {  margin: 5px 0; }
+	 
+    .entry p, .entry li, .entry table tr td { font-size: .8em; line-height: 1.35em; }  
+    img.contentimg { 
+         max-width: 96% !important; height: auto !important; float: none; text-align: center;  
+    }
+    img.alignright, img.alignleft { float: none; margin: 0; padding: 0; text-align: center; }
+    #site-title img { width: 100%; overflow: hidden; }
+    #site-title img.smallbanner { width: 90%; padding: 0 5px; }
+     
+    #supplementary-inside .widget-area, #front-featured-inside .widget-area, 
+    #content, #content.narrowcolumn, .entry { 
+          width: 96%; padding: 0 2% 15px 0; margin-right: 0; margin-bottom: 15px; border-bottom: 1px #dedede solid; 
+    }
+
+    .page-title { padding: 0; }
+    #footer-widgets .block {width: 100%}
+    
+    #right-header-elements { width: 100%; }
+    #menu-secondary-menu { display: none; }
+    #search-form  { width: 55%; position: absolute; bottom: -44px; right: 0; }  
+    #search-form input { width: 65%; top: 3px; }
+    #sidebar { margin-top: 10px; width: 100%; }
+    .sidebar-widget { width: 82%; margin: 10px 4%; padding: 15px 5%;  
+         border: 1px solid #dedede;
+        -moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius: 7px;
+        behavior: url(http://www.yogaofsrichinmoy.com/wp-content/themes/vs-simplicity/PIE/PIE.php);
+    }
+    .sidebar-widget ul li { font-size: 1.2em; margin-bottom: 10px; }
+    
+    #primary-navigation { font-size: 12px; text-align: center; width: 100%; }
+    #primary-navigation ul.menu { text-align: center; }
+    #primary-navigation ul.menu li a { padding: 3px 6px; }
+    #primary-navigation ul.menu li a:hover { padding: 3px 6px; }
+
+    h1 { font-size: 1.4em;} h2 { font-size: 1.1em;} h3 { font-size: 1.0em;} h4 { font-size: .9em;} h5 { font-size: .8em;}	
+
+     #comments input[type="text"], #commentForm input[type="text"]{ width: 46% !important; margin-right: 5px; }
+
+    #wpss_slideshow_front-page, .wpss_slideshow_, .wpss_slide { max-width: 100% !important; }
+   .wpss_content_half h2 { 
+      font-size: 1.2em !important; line-height: 1.15em; margin-bottom: 10px !important; text-align: center;
+   }
+   .wpss_content_half p { 
+      font-size: 1em !important; line-height: 1.25em; margin-bottom: 10px !important; text-align: center;
+   }
+   .slider-read-more { font-size: 1em !important; width: 70%; margin: 0 15%; text-align: center; line-height: 1.15em;  }
+   .slider-read-more a, .slider-read-more a:link, .slider-read-more a:visited { padding: 6px 0 6px 0; }
+   #wpss_slideshow_front-page .wpss_img_half img { margin-top: 40px !important; }
+  
+} 
+
+@media only screen and (max-device-width: 550px), only screen and (max-width: 550px)  {
+   #wpss_slideshow_front-page .wpss_content_half  { margin-top: 15px !important; }
+}
+
+@media only screen and (max-device-width: 480px), only screen and (max-width: 480px)  {
+   .wpss_content_half h2 { font-size: 1.05em !important; }
+   .wpss_content_half p { font-size: .9em !important; }
+   .slider-read-more { font-size: .9em !important; }
+    #wpss_slideshow_front-page, .wpss_slideshow_, .wpss_slide { height: 220px !important; }
+    #wpss_slideshow_pager_front-page { top: 200px !important; }
+
+}
+
+@media only screen and (max-device-width: 400px), only screen and (max-width: 400px)  {
+   #wpss_slideshow_front-page, .wpss_slideshow_, .wpss_slide {  height: 390px !important;  }
+   #wpss_slideshow_pager_front-page { top: 375px !important; }
+   #wpss_slideshow_front-page .wpss_img_half { 
+       width: 94% !important; 
+       padding: 1% !important;
+       margin: 0 2% !important;  
+       height: auto !important; 
+   }
+   #wpss_slideshow_front-page .wpss_img_half img { margin-top: 0 !important; }
+   #wpss_slideshow_front-page .wpss_content_half  { 
+         max-width: 100% !important;
+         width: 100% !important; 
+         margin: 10px 0 0 0 !important;     
+   }
+   
+   
+   .alignright-width480, .alignleft-width480 { float: none !important; display: block; margin: 0 auto !important; padding: 0 !important; text-align: center; }
+    .alignright-width650, .alignleft-width650 { float: none !important; display: block; margin: 0 auto !important; padding: 0 !important; text-align: center; }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) , only screen and (min-width: 320px) and (max-width: 480px) {
+    .alignright-width650, .alignleft-width650 { float: none !important; display: block; margin: 0 auto !important; padding: 0 !important; text-align: center; }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
